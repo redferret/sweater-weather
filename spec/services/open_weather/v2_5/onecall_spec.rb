@@ -31,6 +31,35 @@ RSpec.describe OpenWeather::V2_5::ApiEndpoints, :vcr do
         expect(weather).to have_key(:main)
         expect(weather).to have_key(:description)
         expect(weather).to have_key(:icon)
+
+        daily = response[:daily]
+
+        expect(daily).to have_key(:dt)
+        expect(daily).to have_key(:sunrise)
+        expect(daily).to have_key(:sunset)
+        expect(daily).to have_key(:temp)
+        expect(daily).to have_key(:weather)
+
+        daily_temp = daily[:temp]
+
+        expect(daily_temp).to have_key(:max)
+        expect(daily_temp).to have_key(:min)
+
+        daily_weather = daily[:weather].first
+
+        expect(daily_weather).to have_key(:description)
+        expect(daily_weather).to have_key(:icon)
+
+        hourly = response[:hourly]
+
+        expect(hourly).to have_key(:dt)
+        expect(hourly).to have_key(:temp)
+        expect(hourly).to have_key(:weather)
+
+        hourly_weather = daily[:weather].first
+
+        expect(hourly_weather).to have_key(:description)
+        expect(hourly_weather).to have_key(:icon)
       end
     end
   end
