@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe OpenWeather::V2_5::ApiEndpoints, :vcr do
-  VCR.use_cassette('onecall', :record => :new_episodes) do
+  VCR.use_cassette('onecall', record: :new_episodes) do
     describe 'onecall' do
       it 'returns expected data when successful' do
         # Define endpoint parameters here
