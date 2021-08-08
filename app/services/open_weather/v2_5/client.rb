@@ -1,6 +1,6 @@
 require_relative 'endpoint_helpers'
 
-class OpenWeather::2.5::Client
+class OpenWeather::V2_5::Client
   extend EndpointHelpers
 
   def self.client(params)
