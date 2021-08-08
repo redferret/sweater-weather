@@ -4,7 +4,7 @@ class Geocoding::V1::Client
   extend EndpointHelpers
 
   def self.client(params)
-    params[:key] = ENV['OPEN_WEATHER_API_KEY']
+    params[:key] = ENV['GEO_CODING_API_KEY']
     Faraday.new(
       url: geocoding_api_endpoint,
       params: params
