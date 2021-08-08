@@ -15,20 +15,10 @@
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 require 'simplecov'
 SimpleCov.start 'rails'
-SimpleCov.add_filter ['spec', 'config']
-require 'webmock/rspec'
-require 'vcr'
-
-VCR.configure do |config|
-  config.cassette_library_dir = "spec/fixtures/vcr_cassettes"
-  config.hook_into :webmock
-  config.filter_sensitive_data("<key>") { ENV['OPEN_WEATHER_API_KEY'] }
-  config.filter_sensitive_data("<appid>") { ENV['GEO_CODING_API_KEY'] }
-  config.allow_http_connections_when_no_cassette = true
-  config.configure_rspec_metadata!
-end
+SimpleCov.add_filter ['spec', 'config', 'app/channels', 'app/jobs', 'app/mailers']
 
 RSpec.configure do |config|
+  require 'webmock/rspec'
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest
   # assertions if you prefer.
