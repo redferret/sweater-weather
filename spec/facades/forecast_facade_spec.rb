@@ -36,10 +36,10 @@ RSpec.describe ForecastFacade do
 
           first_hour = forecast.hourly_weather.first
 
-          expect(first_day).to have_key(:time)
-          expect(first_day).to have_key(:temperature)
-          expect(first_day).to have_key(:conditions)
-          expect(first_day).to have_key(:icon)
+          expect(first_hour).to have_key(:time)
+          expect(first_hour).to have_key(:temperature)
+          expect(first_hour).to have_key(:conditions)
+          expect(first_hour).to have_key(:icon)
         end
       end
     end

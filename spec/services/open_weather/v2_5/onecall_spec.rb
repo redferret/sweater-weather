@@ -32,7 +32,7 @@ RSpec.describe OpenWeather::V2_5::ApiEndpoints, :vcr do
         expect(weather).to have_key(:description)
         expect(weather).to have_key(:icon)
 
-        daily = response[:daily]
+        daily = response[:daily].first
 
         expect(daily).to have_key(:dt)
         expect(daily).to have_key(:sunrise)
@@ -50,7 +50,7 @@ RSpec.describe OpenWeather::V2_5::ApiEndpoints, :vcr do
         expect(daily_weather).to have_key(:description)
         expect(daily_weather).to have_key(:icon)
 
-        hourly = response[:hourly]
+        hourly = response[:hourly].first
 
         expect(hourly).to have_key(:dt)
         expect(hourly).to have_key(:temp)
