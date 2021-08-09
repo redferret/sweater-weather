@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
 
-      resource :forcast, only: :show
+      resource :forecast, only: :show
 
       namespace :users do
       end
