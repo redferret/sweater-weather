@@ -30,9 +30,12 @@ RSpec.describe 'Forecast Request' do
       end
     end
 
-    context 'when empty query param is given' do
+    context 'when empty or missing query param is given' do
       it 'returns status 404' do
         get '/api/v1/forecast'
+        expect(response).to have_http_status 404
+
+        get '/api/v1/forecast?location'
         expect(response).to have_http_status 404
       end
     end
