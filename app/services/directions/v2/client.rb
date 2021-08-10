@@ -1,12 +1,12 @@
 require_relative 'endpoint_helpers'
 
-class Geocoding::V1::Client
+class Directions::V2::Client
   extend EndpointHelpers
 
   def self.client(params)
     params[:key] = ENV['MAP_QUEST_API_KEY']
     Faraday.new(
-      url: geocoding_api_endpoint,
+      url: directions_api_endpoint,
       params: params
     )
   end
