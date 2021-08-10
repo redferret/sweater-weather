@@ -1,5 +1,5 @@
 class Background
-  alias :read_attribute_for_serialization :send
+  alias read_attribute_for_serialization send
   attr_reader :image
 
   def initialize(attrs)
