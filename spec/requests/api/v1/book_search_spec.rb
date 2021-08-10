@@ -45,16 +45,16 @@ RSpec.describe 'Book Search endpoint' do
               first_book = books.first
 
               expect(first_book).to have_key(:isbn)
-              expect(first_book[:isbn).to be_an Array
+              expect(first_book[:isbn]).to be_an Array
               expect(first_book).to have_key(:title)
               expect(first_book).to have_key(:publisher)
-              expect(first_book[:publisher).to be_an Array
+              expect(first_book[:publisher]).to be_an Array
             end
           end
 
           context 'with empty location' do
             it 'returns status of 404' do
-              get '/api/v1/book-search?location&quantity=5'
+              get '/api/v1/book-search?location=&quantity=5'
 
               expect(response).to have_http_status 404
             end
