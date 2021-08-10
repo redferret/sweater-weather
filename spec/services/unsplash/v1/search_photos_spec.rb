@@ -13,6 +13,7 @@ RSpec.describe Unsplash::V1::ApiEndpoints, :vcr do
       expect(first_result).to have_key(:user)
       expect(first_result[:urls]).to have_key(:regular)
       expect(first_result[:user]).to have_key(:portfolio_url)
+      expect(first_result[:user]).to have_key(:username)
     end
   end
 end
