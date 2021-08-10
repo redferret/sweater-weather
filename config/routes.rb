@@ -3,6 +3,7 @@ Rails.application.routes.draw do
     namespace :v1 do
 
       resource :forecast, only: :show
+      get 'book-search', to:'search_books#show'
 
       namespace :users do
       end
