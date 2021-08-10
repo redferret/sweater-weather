@@ -13,6 +13,7 @@ RSpec.describe Forecast do
 
     it 'exists' do
       expect(@forecast).to be_a Forecast
+      expect(Forecast.model_name).to eq 'Forecast'
     end
 
     it 'has expected attributes' do
