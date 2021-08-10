@@ -30,6 +30,7 @@ gem 'oj'
 gem 'faraday'
 gem 'active_model_serializers'
 gem 'rubocop', require: false
+gem 'email_validator'
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 # gem 'rack-cors'
 

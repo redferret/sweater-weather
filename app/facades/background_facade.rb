@@ -13,6 +13,6 @@ class BackgroundFacade
         name: first_result[:user][:name]
       }
     }
-    Background.new({image: image})
+    Background.new({ image: image })
   end
 end
