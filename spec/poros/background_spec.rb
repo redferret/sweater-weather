@@ -3,16 +3,17 @@ require 'rails_helper'
 RSpec.describe Background do
   describe 'instance,' do
     before :each do
-      attrs = {
-        image: {
-          location: '',
-          image_url: '',
-          author: {
-            portfolio_url: '',
-            username: '',
-            name: ''
-          }
+      @image = {
+        location: '',
+        image_url: '',
+        author: {
+          portfolio_url: '',
+          username: '',
+          name: ''
         }
+      }
+      attrs = {
+        image: @image
       }
       @background = Background.new(attrs)
     end
@@ -22,7 +23,7 @@ RSpec.describe Background do
     end
 
     it 'has expected attributes' do
-      expect(@background).to have_attributes(:image)
+      expect(@background).to have_attributes(image: @image)
       expect(@background.image).to have_key(:location)
       expect(@background.image).to have_key(:image_url)
       expect(@background.image).to have_key(:author)
