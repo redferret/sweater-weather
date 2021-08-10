@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'Forecast Request' do
+RSpec.describe 'Forecast Request', :vcr do
   describe 'GET /api/v1/forecast' do
     context 'when valid query param given' do
       before :each do
