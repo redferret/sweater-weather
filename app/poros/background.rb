@@ -1,8 +1,9 @@
 class Background
   alias read_attribute_for_serialization send
-  attr_reader :image
+  attr_reader :id, :image
 
   def initialize(attrs)
+    @id = :null
     @image = attrs[:image]
   end
 
