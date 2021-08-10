@@ -1,11 +1,11 @@
 class Forecast
-  alias :read_attribute_for_serialization :send
+  alias read_attribute_for_serialization send
   attr_reader :current_weather,
               :daily_weather,
               :hourly_weather,
               :type,
               :id
-  
+
   def initialize(attrs)
     @id = :null
     @type = :forecast

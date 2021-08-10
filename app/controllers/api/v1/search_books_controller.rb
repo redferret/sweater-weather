@@ -9,7 +9,7 @@ class Api::V1::SearchBooksController < ApplicationController
   end
 
   private
-  
+
   def quantity_non_positive
     params[:quantity].nil? || params[:quantity].to_i < 1
   end

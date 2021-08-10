@@ -21,10 +21,10 @@ class BookSearchFacade
     end
 
     BookSearch.new({
-      destination: query,
-      total_books_found: searched_books[:numFound],
-      forecast: forecast,
-      books: books
-    })
+                     destination: query,
+                     total_books_found: searched_books[:numFound],
+                     forecast: forecast,
+                     books: books
+                   })
   end
 end

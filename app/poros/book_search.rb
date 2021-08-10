@@ -1,5 +1,5 @@
 class BookSearch
-  alias :read_attribute_for_serialization :send
+  alias read_attribute_for_serialization send
   attr_reader :id,
               :forecast,
               :destination,
