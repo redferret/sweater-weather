@@ -11,6 +11,7 @@ RSpec.describe Directions::V2::ApiEndpoints, :vcr do
       expect(response[:route]).to have_key(:realTime)
       expect(response[:route]).to have_key(:locations)
       expect(response[:route][:locations]).to be_an Array
+      expect(response[:route][:locations].first).to have_key(:latLng)
     end
   end
 end
