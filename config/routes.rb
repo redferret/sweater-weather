@@ -5,8 +5,7 @@ Rails.application.routes.draw do
       resource :forecast, only: :show
       resource :backgrounds, only: :show
       
-      namespace :users do
-      end
+      resource :users, controller: :registration, module: :users, only: :create
 
       namespace :sessions do
       end
