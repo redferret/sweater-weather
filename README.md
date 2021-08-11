@@ -1,5 +1,8 @@
 # README
 
+* Clone repo and run the following
+- `bundle install`
+
 * Ruby version
 - Ruby version 2.7.2
 
