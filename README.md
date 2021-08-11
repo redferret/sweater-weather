@@ -1,24 +1,25 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
 * Ruby version
+- Ruby version 2.7.2
 
 * System dependencies
+- Rails version 5.2.6
 
 * Configuration
 
+Add application yml with the following
+
+- OPEN_WEATHER_API_KEY
+- MAP_QUEST_API_KEY
+- UNSPLASH_API_KEY
+
+Reach out to the authors to get the keys for your dev environment
+
 * Database creation
 
-* Database initialization
+- Run `rails db:{create,migrate}`
 
 * How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- Run `bundle exec rspec`
