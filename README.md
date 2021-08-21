@@ -2,22 +2,20 @@
 
 * Clone repo and run the following
 - `bundle install`
+- `rails db:{create,migrate}
 
-* Ruby version
-- Ruby version 2.7.2
-
-* System dependencies
+* Ruby version 2.7.2
 - Rails version 5.2.6
 
 * Configuration
 
-Add application yml with the following
+Add `application.yml` in the config directory with the following
 
 - OPEN_WEATHER_API_KEY
 - MAP_QUEST_API_KEY
 - UNSPLASH_API_KEY
 
-Reach out to the authors to get the keys for your dev environment
+Please contact owner to obtain keys
 
 * Database creation
 
