@@ -2,7 +2,7 @@
 
 * Clone repo and run the following
 - `bundle install`
-- `rails db:{create,migrate}
+- `rails db:{create,migrate}`
 
 * Ruby version 2.7.2
 - Rails version 5.2.6
